@@ -1,0 +1,274 @@
+phy,cla,ord,fam,gen,taxon,Motility,Body size,Burrowing depth,Morphology,Mobility,Mixing type,Mixing rate,Mi,Mi2,Ri,Morphology 2,Morphology 2,Body size 2,Burrowing depth 2,Mixing rate 2
+Annelida,Polychaeta,Sabellida,Serpulidae,Spirobranchus,Spirobranchus triqueter,Tubicolous,1-3cm,0cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,2,1,2
+Annelida,Polychaeta,Sabellida,Sabellariidae,Sabellaria,Sabellaria spinulosa,Tubicolous,3-10cm,0cm,Cylindrical,Very low,Surface mixing,Very low,1,1,1,1,1,3,1,3
+Nematoda,,,,,Nematoda,Crawler,<1cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,1,2,4
+Annelida,Polychaeta,Spionida,Spionidae,Streblospio,Streblospio shrubsolii,Tubicolous,<1cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,1,2,4
+Annelida,Polychaeta,Spionida,Spionidae,Polydora,Polydora,Tubicolous,1-3cm,0-5cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,2,2,4
+Annelida,Polychaeta,Spionida,Spionidae,Polydora,Polydora cornuta,Tubicolous,1-3cm,0-5cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,2,2,4
+Annelida,Polychaeta,Terebellida,Terebellidae,Thelepus,Thelepus cincinnatus,Tubicolous,10-20cm,0cm,Cylindrical,Very low,Downward conveying,Very low,1,1,3,1,1,4,1,4
+Cephalorhyncha,Kinorhyncha,,,,Kinorhyncha,Crawler,<1cm,0-5cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,1,2,6
+Annelida,Polychaeta,Spionida,Spionidae,Spiophanes,Spiophanes bombyx,Tubicolous,3-10cm,0-5cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,3,2,6
+Mollusca,Bivalvia,[unassigned] Euheterodonta,Hiatellidae,Hiatella,Hiatella arctica,Attached,3-10cm,0cm,Bivalved,Very low,Surface mixing,Very low,1,1,1,2,2,3,1,6
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Mytilus,Mytilus edulis,Attached,3-10cm,0cm,Bivalved,Very low,Surface mixing,Very low,1,1,1,2,2,3,1,6
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Lepidonotus,Lepidonotus squamatus,Crawler,3-10cm,0cm,Cylindrical,Very low,Surface mixing,Very low,1,1,1,2,2,3,1,6
+Annelida,Polychaeta,Spionida,Spionidae,Aonides,Aonides paucibranchiata,Crawler,1-3cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,2,2,8
+Annelida,Polychaeta,Terebellida,Terebellidae,Eupolymnia,Eupolymnia nebulosa,Tubicolous,10-20cm,0-5cm,Cylindrical,Very low,Surface mixing,Very low,1,1,1,1,1,4,2,8
+Platyhelminthes,Turbellaria,,,,Turbellaria,Crawler-Swimmer,1-3cm,0-5cm,Flat,Low,Surface mixing,Very low,2,2,2,1,1,2,2,8
+Mollusca,Bivalvia,Veneroida,Kelliidae,Kellia,Kellia suborbicularis,Crawler,<1cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,1,2,8
+Mollusca,Bivalvia,Veneroida,Montacutidae,Kurtiella,Kurtiella bidentata,Crawler,<1cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,1,2,8
+Mollusca,Bivalvia,Veneroida,Tellinidae,Moerella,Moerella pygmaea,Crawler,<1cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,1,2,8
+Annelida,Polychaeta,Phyllodocida,Pholoidae,Pholoe,Pholoe,Crawler,<1cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,2,2,1,2,8
+Mollusca,Bivalvia,Carditoida,Astartidae,Astarte,Astarte borealis,Crawler,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Carditoida,Astartidae,Astarte,Astarte elliptica,Crawler,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Carditoida,Astartidae,Astarte,Astarte montagui,Crawler,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Carditoida,Astartidae,Astarte,Astarte sulcata,Crawler,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Musculus,Musculus discors,Attached,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Musculus,Musculus niger,Attached,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Mollusca,Bivalvia,Myoida,Myidae,Sphenia,Sphenia binghami,Attached,1-3cm,0cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,1,8
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eulalia,Eulalia bilineata,Crawler,3-10cm,0cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,3,1,9
+Annelida,Polychaeta,Sabellida,Oweniidae,Myriochele,Myriochele,Tubicolous,3-10cm,5-10cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,3,3,9
+Annelida,Polychaeta,Sabellida,Oweniidae,Owenia,Owenia fusiformis,Tubicolous,3-10cm,5-10cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,3,3,9
+Annelida,Polychaeta,Terebellida,Trichobranchidae,Terebellides,Terebellides stroemii,Tubicolous,3-10cm,5-10cm,Cylindrical,Very low,Downward conveying,Very low,1,1,3,1,1,3,3,9
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca aequicornis,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca diadema,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca gibba,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca tenuicornis,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca typica,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Photidae,Photis,Photis longicaudata,Crawler-Swimmer,<1cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,1,2,10
+Arthropoda,Malacostraca,Amphipoda,Photidae,Gammaropsis,Gammaropsis maculata,Crawler-Swimmer,<1cm,0cm,Articulated,Low,Surface mixing,Very low,2,2,2,4,5,1,1,10
+Arthropoda,Malacostraca,Amphipoda,Photidae,Gammaropsis,Gammaropsis nitida,Crawler-Swimmer,<1cm,0cm,Articulated,Low,Surface mixing,Very low,2,2,1,4,5,1,1,10
+Arthropoda,Malacostraca,Amphipoda,Photidae,Gammaropsis,Gammaropsis palmata,Crawler-Swimmer,<1cm,0cm,Articulated,Low,Surface mixing,Very low,2,2,2,4,5,1,1,10
+Annelida,Polychaeta,,Cossuridae,Cossura,Cossura longocirrata,Crawler,1-3cm,0-5cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,2,12
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eumida,Eumida sanguinea,Crawler,1-3cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,2,2,12
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Micronephthys,Micronephthys,Crawler-Swimmer,1-3cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,2,2,12
+Annelida,Polychaeta,Phyllodocida,Sigalionidae,Pisione,Pisione remota,Crawler,1-3cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,2,2,12
+Annelida,Polychaeta,,Capitellidae,Capitella,Capitella capitata,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,Upward conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,,Capitellidae,,Capitellidae,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,Upward conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Terebellida,Cirratulidae,Caulleriella,Caulleriella,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Magelonidae,Magelona,Magelona,Crawler,3-10cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Magelonidae,Magelona,Magelona alleni,Crawler,3-10cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Magelonidae,Magelona,Magelona rosea,Crawler,3-10cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Poecilochaetidae,Poecilochaetus,Poecilochaetus serpens,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Prionospio,Prionospio cirrifera,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Prionospio,Prionospio malmgreni,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Prionospio,Prionospio steenstrupi,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Spio,Spio,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Spio,Spio filicornis,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Spionida,Spionidae,Spio,Spio goniocephala,Tubicolous,3-10cm,0-5cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,2,12
+Annelida,Polychaeta,Phyllodocida,Syllidae,Streptosyllis,Streptosyllis websteri,Crawler,<1cm,0-5cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,2,2,1,2,12
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea catherinae,Crawler,<1cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,1,4,12
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea minuta,Crawler,<1cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,1,4,12
+Annelida,Polychaeta,Terebellida,Ampharetidae,Ampharete,Ampharete,Tubicolous,3-10cm,10-15cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,3,4,12
+Annelida,Polychaeta,Terebellida,Pectinariidae,Lagis,Lagis koreni,Tubicolous,3-10cm,10-15cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,4,12
+Phoronida,,,,Phoronis,Phoronis,Tubicolous,3-10cm,10-15cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,3,4,12
+Phoronida,,,,Phoronis,Phoronis hippocrepia,Tubicolous,3-10cm,10-15cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,3,4,12
+Phoronida,,,,Phoronis,Phoronis muelleri,Tubicolous,3-10cm,10-15cm,Cylindrical,Very low,Surface mixing,Very low,1,1,2,1,1,3,4,12
+Annelida,Polychaeta,Terebellida,Cirratulidae,Chaetozone,Chaetozone setosa,Crawler,1-3cm,5-10cm,Cylindrical,Low,Surface mixing,Very low,2,2,2,1,1,2,3,12
+Arthropoda,Malacostraca,Amphipoda,Dulichiidae,Dyopedos,Dyopedos monacantha,Crawler-Swimmer,<1cm,0cm,Articulated,Intermediate,Surface mixing,Very low,3,3,2,4,5,1,1,15
+Arthropoda,Malacostraca,Decapoda,Porcellanidae,Pisidia,Pisidia longicornis,Crawler,<1cm,0cm,Articulated,Intermediate,Surface mixing,Very low,3,3,1,4,5,1,1,15
+Arthropoda,Malacostraca,Cumacea,Pseudocumatidae,Pseudocuma,Pseudocuma,Crawler-Swimmer,<1cm,0cm,Articulated,Intermediate,Surface mixing,Very low,3,3,2,4,5,1,1,15
+Annelida,Polychaeta,,Maldanidae,Axiothella,Axiothella,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Euclymene,Euclymene droebachiensis,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Euclymene,Euclymene lumbricoides,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Maldane,Maldane sarsi,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,Terebellida,Ampharetidae,Melinna,Melinna cristata,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,Capitellida,Maldanidae,Petaloproctus,Petaloproctus tenuis,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Praxillella,Praxillella,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Praxillella,Praxillella affinis,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Praxillella,Praxillella praetermissa,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Rhodine,Rhodine,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Rhodine,Rhodine gracilior,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Annelida,Polychaeta,,Maldanidae,Rhodine,Rhodine loveni,Tubicolous,3-10cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,3,5,15
+Mollusca,Bivalvia,Veneroida,Semelidae,Abra,Abra nitida,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Mollusca,Bivalvia,Veneroida,Semelidae,Abra,Abra tenuis,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Mollusca,Bivalvia,Myoida,Corbulidae,Corbula,Corbula gibba,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Mollusca,Bivalvia,Veneroida,Tellinidae,Macoma,Macoma balthica,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Mollusca,Bivalvia,Veneroida,Mactridae,Spisula,Spisula elliptica,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Mollusca,Bivalvia,Veneroida,Tellinidae,Tellina,Tellina tenuis,Crawler,1-3cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,2,16
+Annelida,Polychaeta,Terebellida,Terebellidae,Lanice,Lanice conchilega,Tubicolous,10-20cm,10-15cm,Cylindrical,Very low,Downward conveying,Very low,1,1,3,1,1,4,4,16
+Mollusca,Bivalvia,Veneroida,Montacutidae,Tellimya,Tellimya ferruginosa,Crawler,<1cm,10-15cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,1,4,16
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone flava,Crawler,3-10cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,3,2,18
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone longa,Crawler,3-10cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,3,2,18
+Annelida,Polychaeta,Phyllodocida,Goniadidae,Goniada,Goniada maculata,Crawler-Swimmer,3-10cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,1,1,3,2,18
+Mollusca,Bivalvia,Pectinoida,Pectinidae,Mimachlamys varia,Mimachlamys varia,Attached,3-10cm,0cm,Bivalved,Intermediate,Surface mixing,Very low,3,3,2,2,2,3,1,18
+Annelida,Polychaeta,Phyllodocida,Hesionidae,Kefersteinia,Kefersteinia cirrata,Crawler,3-10cm,0cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,2,2,3,1,18
+Annelida,Polychaeta,Spionida,Spionidae,Malacoceros,Malacoceros fuliginosus,Crawler-Swimmer,3-10cm,5-10cm,Cylindrical,Low,D/U conveying,Very low,2,2,3,1,1,3,3,18
+Annelida,Polychaeta,Spionida,Spionidae,Scolelepis,Scolelepis bonnieri,Crawler,3-10cm,5-10cm,Cylindrical,Low,Upward conveying,Very low,2,2,3,1,1,3,3,18
+Arthropoda,Malacostraca,Amphipoda,Melitidae,Abludomelita,Abludomelita obtusata,Crawler-Swimmer,<1cm,0-5cm,Articulated,Low,Surface mixing,Very low,2,2,2,4,5,1,2,20
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Synchelidium,Synchelidium haplocheles,Crawler-Swimmer,<1cm,0-5cm,Articulated,Low,Surface mixing,Very low,2,2,2,4,5,1,2,20
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Synchelidium,Synchelidium maculatum,Crawler-Swimmer,<1cm,0-5cm,Articulated,Low,Surface mixing,Very low,2,2,2,4,5,1,2,20
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca brevicornis,Crawler-Swimmer,1-3cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,2,2,20
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca macrocephala,Crawler-Swimmer,1-3cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,2,2,20
+Arthropoda,Malacostraca,Amphipoda,Ampeliscidae,Ampelisca,Ampelisca spinipes,Crawler-Swimmer,1-3cm,0-5cm,Articulated,Very low,Surface mixing,Very low,1,1,2,4,5,2,2,20
+Annelida,Polychaeta,,Maldanidae,Euclymene,Euclymene,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,,Maldanidae,Heteroclymene,Heteroclymene robusta,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,Spionida,Spionidae,Laonice,Laonice cirrata,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,,Maldanidae,,Maldanidae,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,Upward conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,,Maldanidae,Nicomache,Nicomache,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,,Maldanidae,Nicomache,Nicomache lumbricalis,Tubicolous,10-20cm,15-30cm,Cylindrical,Very low,D/U conveying,Very low,1,1,3,1,1,4,5,20
+Annelida,Polychaeta,Eunicida,Onuphidae,Hyalinoecia,Hyalinoecia tubicola,Tubicolous,10-20cm,0-5cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,4,2,24
+Annelida,Polychaeta,Eunicida,Onuphidae,Nothria,Nothria conchylega,Tubicolous,10-20cm,0-5cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,4,2,24
+Mollusca,Bivalvia,Nuculida,Nuculidae,Nucula,Nucula nitidosa,Crawler,1-3cm,0-5cm,Bivalved,Intermediate,Surface mixing,Very low,3,3,2,2,2,2,2,24
+Mollusca,Bivalvia,Veneroida,Veneridae,Chamelea,Chamelea striatula,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,Veneroida,Psammobiidae,Gari,Gari,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,Veneroida,Psammobiidae,Gari,Gari fervensis,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,[unassigned] Euheterodonta,Pharidae,Phaxas,Phaxas pellucidus,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,Veneroida,Mactridae,Spisula,Spisula solida,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,Veneroida,Mactridae,Spisula,Spisula subtruncata,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Mollusca,Bivalvia,Veneroida,Veneridae,Circomphalus,Venus casina,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,3,2,24
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe impar,Crawler,1-3cm,0-5cm,Cylindrical,Intermediate,Diffusion,Very low,3,3,4,2,2,2,2,24
+Mollusca,Gastropoda,Littorinimorpha,Hydrobiidae,Peringia,Peringia ulvae,Crawler-Swimmer,<1cm,0-5cm,Globular,Intermediate,Surface mixing,Very low,3,3,2,3,4,1,2,24
+Mollusca,Gastropoda,Littorinimorpha,Naticidae,Lunatia,Euspira nitida,Crawler,1-3cm,0cm,Globular,Intermediate,Surface mixing,Very low,3,3,2,3,4,2,1,24
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea cerrutii,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea suecica,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea wassi,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Cirrophorus,Cirrophorus branchiatus,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Cirrophorus,Cirrophorus furcatus,Crawler,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Annelida,Polychaeta,,Paraonidae,Paradoneis,Paradoneis lyra,Crawler-Swimmer,1-3cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Very low,3,3,2,1,1,2,4,24
+Mollusca,Bivalvia,Veneroida,Semelidae,Abra,Abra alba,Crawler,1-3cm,5-10cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,3,24
+Mollusca,Bivalvia,Veneroida,Semelidae,Abra,Abra prismatica,Crawler,1-3cm,5-10cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,3,24
+Mollusca,Bivalvia,Veneroida,Donacidae,Donax,Donax vittatus,Crawler,1-3cm,5-10cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,3,24
+Mollusca,Bivalvia,Veneroida,Tellinidae,Tellina,Tellina fabula,Crawler,1-3cm,5-10cm,Bivalved,Low,Surface mixing,Very low,2,2,2,2,2,2,3,24
+Mollusca,Bivalvia,Lucinoida,Thyasiridae,Thyasira,Thyasira,Crawler,1-3cm,5-10cm,Bivalved,Low,Downward conveying,Very low,2,2,3,2,2,2,3,24
+Annelida,Polychaeta,,Maldanidae,Asychis,Asychis biceps,Tubicolous,>20cm,15-30cm,Cylindrical,Very low,Upward conveying,Low,1,1,3,1,1,5,5,25
+Annelida,Polychaeta,,Maldanidae,Praxillura,Praxillura longissima,Tubicolous,>20cm,15-30cm,Cylindrical,Very low,Upward conveying,Low,1,1,3,1,1,5,5,25
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Hypereteone,Hypereteone foliosa,Crawler,3-10cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,3,27
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys cirrosa,Crawler-Swimmer,3-10cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,3,27
+Annelida,Polychaeta,Spionida,Chaetopteridae,Chaetopterus,Chaetopterus variopedatus,Tubicolous,>20cm,>30cm,Cylindrical,Very low,D/U conveying,Low,1,1,3,1,1,5,6,30
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia elegans,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia guilliamsoniana,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia pelagica,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia pilosa,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia tenuipes,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Bodotriidae,Bodotria,Bodotria arenosa,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Bodotriidae,Bodotria,Bodotria scorpioides,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Bodotriidae,Cumopsis,Cumopsis goodsir,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Diastylidae,Diastylis,Diastylis bradyi,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Diastylidae,Diastylis,Diastylis rathkei,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Isopoda,Cirolanidae,Eurydice,Eurydice pulchra,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Phoxocephalidae,Harpinia,Harpinia antennaria,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Bodotriidae,Iphinoe,Iphinoe trispinosa,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Megaluropidae,Megaluropus,Megaluropus agilis,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Perioculodes,Perioculodes longimanus,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Pontocrates,Pontocrates,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Pontocrates,Pontocrates altamarinus,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Cumacea,Pseudocumatidae,Pseudocuma,Pseudocuma longicorne,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Urothoidae,Urothoe,Urothoe elegans,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Westwoodilla,Westwoodilla caecula,Crawler-Swimmer,<1cm,0-5cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,2,30
+Arthropoda,Malacostraca,Mysida,Mysidae,Schistomysis,Schistomysis kervillei,Crawler-Swimmer,1-3cm,0cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,2,1,30
+Annelida,Polychaeta,,Maldanidae,Clymenura,Clymenura borealis,Crawler,1-3cm,15-30cm,Cylindrical,Intermediate,Upward conveying,Low,3,3,3,1,1,2,5,30
+Annelida,Polychaeta,Spionida,Spionidae,Scolelepis,Scolelepis squamata,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Low,D/U conveying,Low,2,2,3,1,1,3,6,36
+Mollusca,Bivalvia,Veneroida,Cardiidae,Acanthocardia,Acanthocardia echinata,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,3,3,2,36
+Mollusca,Bivalvia,Veneroida,Cardiidae,Acanthocardia,Acanthocardia tuberculata,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,3,3,2,36
+Mollusca,Bivalvia,Veneroida,Cardiidae,,Cardiidae,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,3,3,2,36
+Mollusca,Bivalvia,Veneroida,Cardiidae,Cerastoderma,Cerastoderma edule,Crawler,3-10cm,0-5cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,3,3,2,36
+Annelida,Polychaeta,Phyllodocida,Hesionidae,Oxydromus,Oxydromus flexuosus,Crawler,3-10cm,0-5cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,2,2,3,2,36
+Echinodermata,Echinoidea,Camarodonta,Parechinidae,Psammechinus,Psammechinus miliaris,Crawler,3-10cm,0cm,Globular,Intermediate,Surface mixing,Low,3,3,1,3,4,3,1,36
+Annelida,Polychaeta,,Paraonidae,Aricidea,Aricidea simonae,Crawler,3-10cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Low,3,3,2,1,1,3,4,36
+Annelida,Polychaeta,,Paraonidae,Levinsenia,Levinsenia gracilis,Crawler,3-10cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Low,3,3,2,1,1,3,4,36
+Annelida,Polychaeta,,Opheliidae,Ophelia,Ophelia borealis,Crawler,3-10cm,10-15cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,4,36
+Annelida,Polychaeta,,Paraonidae,Paraonis,Paraonis fulgens,Crawler,3-10cm,10-15cm,Cylindrical,Intermediate,Surface mixing,Low,3,3,2,1,1,3,4,36
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys,Crawler-Swimmer,10-20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,4,3,36
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys caeca,Crawler-Swimmer,10-20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,4,3,36
+Mollusca,Bivalvia,Nuculida,Nuculidae,Nucula,Nucula,Crawler,1-3cm,5-10cm,Bivalved,Intermediate,Surface mixing,Low,3,3,2,2,2,2,3,36
+Mollusca,Bivalvia,Veneroida,Veneridae,Dosinia,Dosinia exoleta,Crawler,3-10cm,5-10cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,3,3,36
+Mollusca,Bivalvia,Veneroida,Mactridae,Mactra,Mactra stultorum,Crawler,3-10cm,5-10cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,3,3,36
+Mollusca,Bivalvia,Veneroida,Veneridae,Mysia,Mysia undata,Crawler,3-10cm,5-10cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,3,3,36
+Arthropoda,Pycnogonida,Pantopoda,Pycnogonidae,Pycnogonum,Pycnogonum litorale,Crawler,1-3cm,0cm,Articulated,High,Surface mixing,Low,4,4,1,4,5,2,1,40
+Mollusca,Bivalvia,Anomalodesmata,Thraciidae,Thracia,Thracia phaseolina,Crawler,1-3cm,15-30cm,Bivalved,Low,Downward conveying,Low,2,2,3,2,2,2,5,40
+Echinodermata,Ophiuroidea,Ophiurida,Ophiuridae,Ophiura,Ophiura ophiura,Crawler-Swimmer,3-10cm,0cm,Stellar,Low,Surface mixing,Low,2,2,2,5,7,3,1,42
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Gattyana,Gattyana cirrhosa,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys hystricis,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys incisa,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce groenlandica,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce laminosa,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce longipes,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce maculata,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce mucosa,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce rosea,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce subulifera,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Phyllodocida,Sigalionidae,Sigalion,Sigalion mathildae,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,3,5,45
+Annelida,Polychaeta,Eunicida,Lumbrineridae,Lumbrineris,Lumbrineris,Crawler,>20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,5,3,45
+Annelida,Polychaeta,Eunicida,Lumbrineridae,Lumbrineris,Lumbrineris hibernica,Crawler,>20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,5,3,45
+Annelida,Polychaeta,Eunicida,Lumbrineridae,Lumbrineris,Lumbrineris latreilli,Crawler,>20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,5,3,45
+Annelida,Polychaeta,Eunicida,Lumbrineridae,Lumbrineris,Lumbrineris tetraura,Crawler,>20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,5,3,45
+Annelida,Polychaeta,Eunicida,Lumbrineridae,Scoletoma,Scoletoma fragilis,Crawler,>20cm,5-10cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,5,3,45
+Arthropoda,Malacostraca,Amphipoda,Pontoporeiidae,Bathyporeia,Bathyporeia sarsi,Crawler-Swimmer,<1cm,5-10cm,Articulated,Intermediate,Surface mixing,Low,3,3,2,4,5,1,3,45
+Annelida,Polychaeta,Phyllodocida,Aphroditidae,Aphrodita,Aphrodita aculeata,Crawler,10-20cm,0-5cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,2,2,4,2,48
+Echinodermata,Echinoidea,Clypeasteroida,Echinocyamidae,Echinocyamus,Echinocyamus pusillus,Crawler,1-3cm,0-5cm,Globular,Intermediate,Surface mixing,Low,3,3,2,3,4,2,2,48
+Mollusca,Gastropoda,Neogastropoda,Buccinidae,Buccinum,Buccinum undatum,Crawler,3-10cm,0cm,Globular,High,Surface mixing,Low,4,4,2,3,4,3,1,48
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys hombergii,Crawler-Swimmer,10-20cm,10-15cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,4,4,48
+Annelida,Polychaeta,,Orbiniidae,Scoloplos,Scoloplos armiger,Crawler,10-20cm,10-15cm,Cylindrical,Intermediate,Diffusion,Low,3,3,4,1,1,4,4,48
+Mollusca,Bivalvia,Veneroida,Veneridae,Dosinia,Dosinia lupinus,Crawler,3-10cm,10-15cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,3,4,48
+Mollusca,Bivalvia,Myoida,Myidae,Mya,Mya truncata,Crawler,3-10cm,10-15cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,3,4,48
+Mollusca,Bivalvia,Anomalodesmata,Thraciidae,Thracia,Thracia convexa,Crawler,3-10cm,10-15cm,Bivalved,Low,Downward conveying,Low,2,2,3,2,2,3,4,48
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Modiolus,Modiolus barbatus,Crawler,10-20cm,5-10cm,Bivalved,Low,Surface mixing,Low,2,2,2,2,2,4,3,48
+Annelida,Polychaeta,,Capitellidae,Notomastus,Notomastus latericeus,Crawler,>20cm,15-30cm,Cylindrical,Low,Upward conveying,Intermediate,2,2,3,1,1,5,5,50
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera alba,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera celtica,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera lapidum,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera oxycephala,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera rouxii,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera tridactyla,Crawler-Swimmer,3-10cm,>30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,3,6,54
+Mollusca,Gastropoda,Littorinimorpha,Aporrhaidae,Aporrhais,Aporrhais pespelecani,Crawler,3-10cm,0cm,Globular,Intermediate,Surface mixing,Intermediate,3,3,2,5,6,3,1,54
+Arthropoda,Malacostraca,Amphipoda,Cheirocratidae,Cheirocratus,Cheirocratus sundevalli,Crawler-Swimmer,1-3cm,0-5cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,2,2,60
+Arthropoda,Malacostraca,Mysida,Mysidae,Gastrosaccus,Gastrosaccus spinifer,Crawler-Swimmer,1-3cm,0-5cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,2,2,60
+Arthropoda,Malacostraca,Amphipoda,Urothoidae,Urothoe,Urothoe brevicornis,Crawler-Swimmer,<1cm,10-15cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,1,4,60
+Arthropoda,Malacostraca,Amphipoda,Urothoidae,Urothoe,Urothoe marina,Crawler-Swimmer,<1cm,10-15cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,1,4,60
+Arthropoda,Malacostraca,Amphipoda,Urothoidae,Urothoe,Urothoe poseidonis,Crawler-Swimmer,<1cm,10-15cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,1,4,60
+Arthropoda,Malacostraca,Amphipoda,Urothoidae,Urothoe,Urothoe pulchella,Crawler-Swimmer,<1cm,10-15cm,Articulated,Intermediate,Surface mixing,Intermediate,3,3,2,4,5,1,4,60
+Annelida,Polychaeta,Eunicida,Eunicidae,Eunice,Eunice pennata,Crawler,10-20cm,15-30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,4,5,60
+Annelida,Polychaeta,Eunicida,Eunicidae,Marphysa,Marphysa bellii,Crawler,10-20cm,15-30cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,1,1,4,5,60
+Mollusca,Bivalvia,Lucinoida,Lucinidae,Lucinoma,Lucinoma borealis,Crawler,3-10cm,15-30cm,Bivalved,Low,Surface mixing,Intermediate,2,2,2,2,2,3,5,60
+Arthropoda,Malacostraca,Amphipoda,Corophiidae,Corophium,Corophium,Crawler-Swimmer,<1cm,5-10cm,Articulated,High,Surface mixing,Intermediate,4,4,2,4,5,1,3,60
+Echinodermata,Ophiuroidea,Ophiurida,Amphiuridae,Amphipholis,Amphipholis squamata,Crawler,3-10cm,0cm,Stellar,Intermediate,Diffusion,Intermediate,3,3,4,5,7,3,1,63
+Mollusca,Bivalvia,Veneroida,Arcticidae,Arctica,Arctica islandica,Crawler,10-20cm,10-15cm,Bivalved,Low,Surface mixing,Intermediate,2,2,2,2,2,4,4,64
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Modiolus,Modiolus modiolus,Crawler,10-20cm,10-15cm,Bivalved,Low,Surface mixing,Intermediate,2,2,2,2,2,4,4,64
+Annelida,Polychaeta,Spionida,Spionidae,Scolelepis,Scolelepis foliosa,Crawler,10-20cm,10-15cm,Cylindrical,Low,D/U conveying,Intermediate,2,2,3,2,2,4,4,64
+Annelida,Polychaeta,,Scalibregmatidae,Scalibregma,Scalibregma inflatum,Crawler,3-10cm,>30cm,Cylindrical,High,Diffusion,Intermediate,4,4,4,1,1,3,6,72
+Mollusca,Gastropoda,Littorinimorpha,Naticidae,Euspira,Euspira catena,Crawler,3-10cm,0-5cm,Globular,Intermediate,Surface mixing,Intermediate,3,3,2,3,4,3,2,72
+Mollusca,Gastropoda,Caenogastropoda,Turritellidae,Turritella,Turritella communis,Crawler,3-10cm,0-5cm,Globular,Intermediate,Diffusion,Intermediate,3,3,4,3,4,3,2,72
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Malmgrenia,Malmgreniella lunulata,Crawler,3-10cm,10-15cm,Cylindrical,Intermediate,Diffusion,Intermediate,3,3,4,2,2,3,4,72
+Mollusca,Bivalvia,Mytiloida,Mytilidae,Modiolus,Modiolus,Crawler,10-20cm,5-10cm,Bivalved,Intermediate,Surface mixing,Intermediate,3,3,2,2,2,4,3,72
+Mollusca,Gastropoda,Gastropoda,Acteonidae,Acteon,Acteon tornatilis,Crawler,1-3cm,5-10cm,Globular,Intermediate,Surface mixing,Intermediate,3,3,2,3,4,2,3,72
+Annelida,Polychaeta,Eunicida,Eunicidae,Marphysa,Marphysa sanguinea,Crawler,>20cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,1,1,5,5,75
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys ciliata,Crawler-Swimmer,>20cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,1,1,5,5,75
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys longosetosa,Crawler-Swimmer,>20cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,1,1,5,5,75
+Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys paradoxa,Crawler-Swimmer,>20cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,1,1,5,5,75
+Annelida,Polychaeta,Phyllodocida,Nereididae,Eunereis,Eunereis longissima,Crawler,10-20cm,15-30cm,Cylindrical,High,Diffusion,High,4,4,4,1,1,4,5,80
+Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis,Crawler-Swimmer,10-20cm,15-30cm,Cylindrical,High,Diffusion,High,4,4,4,1,1,4,5,80
+Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis zonata,Crawler-Swimmer,10-20cm,15-30cm,Cylindrical,High,Diffusion,High,4,4,4,1,1,4,5,80
+Mollusca,Bivalvia,Myoida,Myidae,Mya,Mya,Crawler,10-20cm,15-30cm,Bivalved,Low,Surface mixing,High,2,2,2,2,2,4,5,80
+Mollusca,Bivalvia,Myoida,Myidae,Mya,Mya arenaria,Crawler,10-20cm,15-30cm,Bivalved,Low,Surface mixing,High,2,2,2,2,2,4,5,80
+Echinodermata,Ophiuroidea,Ophiurida,Ophiuridae,Ophiocten,Ophiocten affinis,Crawler-Swimmer,3-10cm,0-5cm,Stellar,Low,Surface mixing,High,2,2,2,5,7,3,2,84
+Echinodermata,Ophiuroidea,Ophiurida,Ophiuridae,Ophiura,Ophiura albida,Crawler,3-10cm,0-5cm,Stellar,Low,Surface mixing,High,2,2,2,5,7,3,2,84
+Echinodermata,Ophiuroidea,,,,Ophiuroidea,Crawler-Swimmer,3-10cm,0-5cm,Stellar,Low,Surface mixing,High,2,2,2,5,7,3,2,84
+Echinodermata,Ophiuroidea,Ophiurida,Ophiotrichidae,Ophiothrix,Ophiothrix fragilis,Crawler,10-20cm,0cm,Stellar,Intermediate,Surface mixing,High,3,3,2,5,7,4,1,84
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Bylgides,Bylgides sarsi,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe antilopes,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe fragilis,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe glabra,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Phyllodoce,Phyllodoce lineata,Crawler,3-10cm,15-30cm,Cylindrical,Intermediate,Diffusion,High,3,3,4,2,2,3,5,90
+Mollusca,Bivalvia,[unassigned] Euheterodonta,Pharidae,Ensis,Ensis,Crawler,10-20cm,>30cm,Bivalved,Low,Surface mixing,High,2,2,2,2,2,4,6,96
+Echinodermata,Asteroidea,Velatida,Solasteridae,Crossaster,Crossaster papposus,Crawler,>20cm,0cm,Stellar,Intermediate,Surface mixing,Very high,3,3,1,5,7,5,1,105
+Echinodermata,Echinoidea,Spatangoida,Loveniidae,Echinocardium,Echinocardium flavescens,Crawler,3-10cm,5-10cm,Globular,Intermediate,Diffusion,Very high,3,3,4,3,4,3,3,108
+Echinodermata,Echinoidea,Spatangoida,Loveniidae,Echinocardium,Echinocardium pennatifidum,Crawler,3-10cm,5-10cm,Globular,Intermediate,Diffusion,Very high,3,3,4,3,4,3,3,108
+Arthropoda,Malacostraca,Decapoda,Corystidae,Corystes,Corystes cassivelaunus,Crawler,3-10cm,0-5cm,Articulated,High,Regeneration,Very high,4,4,5,4,5,3,2,120
+Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,Liocarcinus depurator,Crawler-Swimmer,3-10cm,0-5cm,Articulated,High,Regeneration,Very high,4,4,5,4,5,3,2,120
+Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,Liocarcinus holsatus,Crawler-Swimmer,3-10cm,0-5cm,Articulated,High,Regeneration,Very high,4,4,5,4,5,3,2,120
+Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,Liocarcinus marmoreus,Crawler-Swimmer,3-10cm,0-5cm,Articulated,High,Regeneration,Very high,4,4,5,4,5,3,2,120
+Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,Liocarcinus pusillus,Crawler-Swimmer,3-10cm,0-5cm,Articulated,High,Regeneration,Very high,4,4,5,4,5,3,2,120
+Arthropoda,Malacostraca,Amphipoda,Haustoriidae,Haustorius,Haustorius arenarius,Crawler-Swimmer,1-3cm,10-15cm,Articulated,Intermediate,Surface mixing,Very high,3,3,2,4,5,2,4,120
+Echinodermata,Echinoidea,Spatangoida,Brissidae,Brissopsis,Brissopsis lyrifera,Crawler,3-10cm,0-5cm,Stellar,Intermediate,Diffusion,Very high,3,3,4,5,7,3,2,126
+Echinodermata,Echinoidea,Spatangoida,Loveniidae,Echinocardium,Echinocardium cordatum,Crawler,3-10cm,10-15cm,Globular,Intermediate,Diffusion,Very high,3,3,4,3,4,3,4,144
+Echinodermata,Ophiuroidea,Ophiurida,Amphiuridae,Acrocnida,Acrocnida brachiata,Crawler,>20cm,0-5cm,Stellar,Intermediate,Diffusion,Very high,3,3,4,5,7,5,2,210
+Echinodermata,Ophiuroidea,Ophiurida,Amphiuridae,Amphiura,Amphiura chiajei,Crawler,>20cm,5-10cm,Stellar,Intermediate,Diffusion,Very high,3,3,4,5,7,5,3,315
+Echinodermata,Ophiuroidea,Ophiurida,Amphiuridae,Amphiura,Amphiura filiformis,Crawler,>20cm,5-10cm,Stellar,Intermediate,Diffusion,Very high,3,3,4,5,7,5,3,315
+Arthropoda,Malacostraca,Decapoda,Callianassidae,Callianassa,Callianassa subterranea,Crawler,3-10cm,>30cm,Articulated,High,Downward conveying,Very high,4,4,4,4,5,3,6,360
+Arthropoda,Malacostraca,Decapoda,Callianassidae,Pestarella,Pestarella tyrrhena,Crawler,3-10cm,>30cm,Articulated,High,Diffusion,Very high,4,4,4,4,5,3,6,360
+Arthropoda,Malacostraca,Decapoda,Upogebiidae,Upogebia,Upogebia deltaura,Crawler,3-10cm,>30cm,Articulated,High,Downward conveying,Very high,4,4,3,4,5,3,6,360
+Arthropoda,Malacostraca,Decapoda,Upogebiidae,Upogebia,Upogebia stellata,Crawler,3-10cm,>30cm,Articulated,High,Downward conveying,Very high,4,4,3,4,5,3,6,360
+Arthropoda,Malacostraca,Decapoda,Nephropidae,Nephrops,Nephrops norvegicus,Crawler,>20cm,15-30cm,Articulated,High,Diffusion,Very high,4,4,4,4,5,5,5,500
