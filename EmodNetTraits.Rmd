@@ -1,11 +1,11 @@
 ---
 title: "Trait-based products of EMODnet benthic biology"
-author: "Karline Soetaert, Olivier Beauchard, Peter Herman"
+author: "Karline Soetaert, Sarah O' Flynn, Olivier Beauchard, Peter Herman"
 date: "9 October 2018"
 output:
+  word_document: default
   pdf_document: default
   html_document: default
-  word_document: default
 ---
 
 # Abstract
@@ -20,12 +20,11 @@ require(viridis)
 
 # Aim of this analysis. 
 
-Throught their activity, benthic animals play an important role in marine ecosystem functioning. More specifically, they mix the sediment by their movement and feeding activity, a process called "bioturbation". They also create water movements, enhancing the exchange of dissolved constituents such as oxygen, and dissolved inorganic nutrients, a process called "bio-irrigation".
+Through their activity, benthic animals play an important role in marine ecosystem functioning. More specifically, they mix the sediment by their movement and feeding, a process called "bioturbation". They also create water movements, enhancing the exchange of dissolved constituents such as oxygen, and dissolved inorganic nutrients, a process called "bio-irrigation".
 
 Both these activities have a large impact on the biogeochemical cycles in the environment, and they are commonly parameterised as single parameters in biogeochemical models. 
 
 Biologists have tried to categorise the bioturbation or bio-irrigation activity based on the identity of the organims.  They do not derive the rate parameters as used in the biogeochemical models but rather derive a potential of the organisms to perform these tasks.
-
 
 Here we use Benthic abundance data from EMODnet to estimate the bioturbation potential and the bioirrigation potential index. 
 
@@ -102,7 +101,7 @@ with(Check, plot(BodyMassAFWD, mw, log= "xy", xlab = "weight dataset 1", ylab = 
 We combine both data sets and add the taxonomic tree by merging the data with the taxon data.
 
 ```{r}
-colnames(mws.ol)[1:2]     <- c("tx", "avweight")
+colnames(mws.ol  )[1:2]   <- c("tx", "avweight")
 colnames(mws.mwtl)[2:3]   <- c("tx", "avweight")
 
 mws.all <- rbind(mws.mwtl[,2:3], mws.ol[,1:2])
@@ -111,50 +110,47 @@ mws.all <- merge(mws.all, Taxo, by = "tx")
 
 ### Expanding the weight dataset
 
-Next we estimate mean weights on species level, on genus level and on the family level, and bind all in one data.frame(mws).
+Next we estimate mean weights on species level, on genus level and on the family level, and bind all in one data.frame(*mws*).
 
 ```{r}
-mws.species <- data.frame(meanW = tapply(mws.all$avweight,INDEX = mws.all$tx, FUN = mean, na.rm = TRUE),
-                          sdW   = tapply(mws.all$avweight,INDEX = mws.all$tx, FUN = sd,   na.rm = TRUE),
-                          n     = tapply(mws.all$avweight,INDEX = mws.all$tx, FUN = length),
+mws.species <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$tx, FUN = mean, na.rm = TRUE),
+                          sdW   = tapply(mws.all$avweight, INDEX = mws.all$tx, FUN = sd,   na.rm = TRUE),
+                          n     = tapply(mws.all$avweight, INDEX = mws.all$tx, FUN = length),
                           level = "species")
 
-
-mws.genus   <- data.frame(meanW = tapply(mws.all$avweight,INDEX = mws.all$gen, FUN = mean, na.rm = TRUE),
-                          sdW   = tapply(mws.all$avweight,INDEX = mws.all$gen, FUN = sd,   na.rm = TRUE),
-                          n     = tapply(mws.all$avweight,INDEX = mws.all$gen, FUN = length),
+mws.genus   <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$gen, FUN = mean, na.rm = TRUE),
+                          sdW   = tapply(mws.all$avweight, INDEX = mws.all$gen, FUN = sd,   na.rm = TRUE),
+                          n     = tapply(mws.all$avweight, INDEX = mws.all$gen, FUN = length),
                           level = "genus")
 mws.genus   <- mws.genus[-which(rownames(mws.genus)==""),]
 mws.genus   <- subset(mws.genus, !is.na(meanW))
 
 
-mws.family  <- data.frame(meanW = tapply(mws.all$avweight,INDEX = mws.all$fam, FUN = mean, na.rm = TRUE),
-                          sdW   = tapply(mws.all$avweight,INDEX = mws.all$fam, FUN = sd,   na.rm = TRUE),
-                          n     = tapply(mws.all$avweight,INDEX = mws.all$fam, FUN = length),
+mws.family  <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$fam, FUN = mean, na.rm = TRUE),
+                          sdW   = tapply(mws.all$avweight, INDEX = mws.all$fam, FUN = sd,   na.rm = TRUE),
+                          n     = tapply(mws.all$avweight, INDEX = mws.all$fam, FUN = length),
                           level = "family")
 mws.family  <- mws.family[-which(rownames(mws.family)==""),]
 mws.family  <- subset(mws.family, !is.na(meanW))
 
 mws <- rbind(mws.species, mws.genus, mws.family)
 mws$taxon <- rownames(mws)
-
 ```
 
 The total number of weight values thus obtained is `r nrow(mws)`, of which `r nrow(mws.species)` are estimated at species level, `r nrow(mws.genus)` at genus level and `r nrow(mws.family)` at family level.
-
 
 
 ## FeedingTypes
 
 Feedingtypes are known from a subset of the species. The following types are distinguished:
 
-* CaSc = carnivore/scavenger
-* De = depositfeeder
-* He = herbivore
-* Om = omnivore
-* Pa = parasite
-* Su = suspension feeder
-* SuDe = suspension/deposit feeder
+* "CaSc" = carnivore/scavenger
+* "De"   = depositfeeder
+* "He"   = herbivore
+* "Om"   = omnivore
+* "Pa"   = parasite
+* "Su"   = suspension feeder
+* "SuDe" = suspension/deposit feeder
 
 ```{R}
 FeedingType <- read.csv("feedingtype_matched.txt")
@@ -192,20 +188,20 @@ The total number of feeding types thus obtained is `r nrow(ft)`, of which `r nro
 
 Life history traits are also assigned on genus and family level, where we take the most commonly encountered trait at the lower level. 
 
-
 ```{R}
 Traits.all <- read.csv("TraitsBiotur.csv")
 cat("\ndimension and first part of the data set : \n")
 dim(Traits.all)
 head(Traits.all, n = 2)
 
-traits.species <- data.frame(Traits.all[,c("taxon","Motility","Body.size","Burrowing.depth","Morphology","Mobility","Mixing.type", 
-  "Mixing.rate", "Mi", "Mi2", "Ri", "Morphology.2", "Morphology.2.1", "Body.size.2", "Burrowing.depth.2", "Mixing.rate.2")], 
+traits.species <- data.frame(Traits.all[, c("taxon", "Motility", "Body.size", "Burrowing.depth", "Morphology", "Mobility", "Mixing.type", "Mixing.rate", "Mi", "Mi2", "Ri", "Morphology.2", "Morphology.2.1", "Body.size.2", "Burrowing.depth.2", "Mixing.rate.2")], 
    n = 1, level = "species")
+```
 
+```{r}
 traitfun <- function(taxon = "gen", what = "Motility"){ 
   X <- data.frame(what = tapply(Traits.all[,what], INDEX = Traits.all[,taxon], 
-                                   FUN = function(x) names(sort(table(x), decreasing = TRUE)[1])), 
+                       FUN = function(x) names(sort(table(x), decreasing = TRUE)[1])), 
              n =  tapply(Traits.all[,what], INDEX = Traits.all[,taxon], FUN = length))
   colnames(X)[1] <- what
   X
@@ -216,7 +212,7 @@ traitfun.all <- function(taxon){
   n <- T$n
   X <- T[,1]
   What <- c("Motility", "Body.size", "Burrowing.depth", "Morphology", "Mobility", "Mixing.type", 
-"Mixing.rate", "Mi", "Mi2", "Ri", "Morphology.2", "Morphology.2.1", "Body.size.2", "Burrowing.depth.2","Mixing.rate.2")
+"Mixing.rate", "Mi", "Mi2", "Ri", "Morphology.2", "Morphology.2.1", "Body.size.2", "Burrowing.depth.2", "Mixing.rate.2")
   
   for (w in What[-1])
     X <- data.frame(X,  traitfun(taxon, what = w)[,1])
@@ -228,14 +224,11 @@ traits.genus  <- traitfun.all("gen")
 traits.genus$level <- "genus"
 traits.family <- traitfun.all("fam")
 traits.family$level <- "family"
-
 traits <- rbind(traits.species, traits.genus[!traits.genus$taxon %in% traits.species$taxon,])
 traits <- rbind(traits, traits.family[!traits.family$taxon %in% traits$taxon,])
-
 ```
 
 The total number of traits thus obtained is `r nrow(traits)`, of which `r nrow(traits.species)` are estimated at species level, `r nrow(traits.genus)` at genus level and `r nrow(traits.family)` at family level.
-
 
 We tabulate the number of occurrences of each trait in the resulting data.frame.
 
@@ -286,7 +279,6 @@ TotalDensity <- aggregate(occ$dens, by = list(data = occ$data, sta = occ$sta, x 
 names(TotalDensity)[5] <- "TotalDens"
 cat("total number of stations per provider : \n")
 table(TotalDensity$data)
-
 ```
 
 The total number of stations in this data set is `r nrow(TotalDensity)`
@@ -306,7 +298,7 @@ legend("bottomright", pch = 16, cex = 0.7, col = 1:20, legend = levels(TotalDens
 
 
 ```{r}
-with (TotalDensity, boxplot((TotalDens)~data, outline = FALSE, las = 2, main = "Mean Density", log = "y"))
+with (TotalDensity, boxplot((TotalDens)~data, outline = FALSE, las = 2, main = "Mean Density per data provider", log = "y"))
 ```
 
 
@@ -327,7 +319,7 @@ TaxoUsed <- Taxo[Taxo$txa%in%occ$tx ,]
 occ.full <- merge(occ, TaxoUsed, by.x = "tx", by.y = "tx")
 ```
 
-To merge density data with the other data sets, a function is created
+To merge density data with the other data sets, a function is created.
 
 
 ```{r}
@@ -359,6 +351,7 @@ MergeData <- function(density = occ.full, data2){
 DensityWeight <- MergeData(density = occ.full, data2 = mws)
 ```
 
+The fraction of data for which individual weight could be estimated = `r nrow(DensityWeight$complete)/nrow(occ.full)`
 
 ## Merging density and traits
 
@@ -366,14 +359,18 @@ DensityWeight <- MergeData(density = occ.full, data2 = mws)
 DensityTrait <- MergeData(density = occ.full, data2 = traits)
 ```
 
+The fraction of data for which traits could be estimated = `r nrow(DensityTrait$complete)/nrow(occ.full)`
 
-Merging density and feeding types
+## Merging density and feeding types
 
 ```{r}
 DensityFT <- MergeData(density = occ.full, data2 = ft)
 ```
 
-Data that have all necessary information for estimating bioturbation potential 
+The fraction of data for which feeding types could be estimated = `r nrow(DensityFT$complete)/nrow(occ.full)`
+
+
+## Data for estimating bioturbation potential 
 
 ```{r}
 DataAll <- merge(DensityWeight$complete [, c("tx", "data","sta","x","y", "dens","ID", "meanW")], 
@@ -389,7 +386,7 @@ The fraction of data that has all information to estimate bioturbation potential
 
 ## Check on the representativeness of the reduced data set
 
-For the mwtl data we now compare the measured biomass with the biomass that we estimate, based on mean weights.
+For the mwtl data we now compare the measured biomass with the biomass that we estimate, based on the mean weights.
 
 ```{r, fig.width=8, fig.height=5}
 par(mfrow = c(1,3))
@@ -420,8 +417,8 @@ We also check the error we would make in the density data if we would estimate t
 ```{r, fig.width=8, fig.height=5}
 
 DENS <- merge(TotalDensity, DensityWeight$DENS); colnames(DENS)[ncol(DENS)] <- "EstDens.W"
-DENS <- merge(DENS, DensityTrait$DENS); colnames(DENS)[ncol(DENS)] <- "EstDens.TR"
-DENS <- merge(DENS, DensityFT$DENS); colnames(DENS)[ncol(DENS)] <- "EstDens.FT"
+DENS <- merge(DENS,         DensityTrait$DENS); colnames(DENS)[ncol(DENS)] <- "EstDens.TR"
+DENS <- merge(DENS,         DensityFT$DENS); colnames(DENS)[ncol(DENS)] <- "EstDens.FT"
 
 TotDensAll <- with(DataAll, aggregate(dens, by = list(data = data, sta = sta, x = x, y = y), FUN = sum))
 colnames(TotDensAll)[5] <- "EstDens.BPC"
@@ -441,7 +438,7 @@ with(DENS, summary(EstDens.BPC/TotalDens))
 
 The estimated density if we only use species for which have all data required for BPc estimation is thus on average `r with(DENS, mean(EstDens.BPC/TotalDens))` of the true value.
 
-As we want to estimate bioturbation potential, we now split this number for the different data providers
+As we want to estimate bioturbation potential, we now split this number for the different data providers to see for which data sets we make the largest errors.
 
 ```{r, fig.width=8, fig.height=8}
 par(mfrow = c(3,1))
@@ -453,24 +450,22 @@ with(DENS, boxplot(r.w ~ data, main = "estimated fraction of density for Weights
 with(DENS, boxplot(r.ft ~ data, main = "estimated fraction of density for Feeding types"))
 ```
 
-The recovered fraction of density:
+The mean recovered fraction of density for the various data providers is :
 
 ```{r}
-data.frame(BPC = with(DENS, tapply(r.bpc, INDEX =  data, FUN = mean)),
+D <- data.frame(BPC = with(DENS, tapply(r.bpc, INDEX =  data, FUN = mean)),
            W = with(DENS, tapply(r.w, INDEX =  data, FUN = mean)),
            FT = with(DENS, tapply(r.ft, INDEX =  data, FUN = mean)))
+knitr:::kable(D, digits = 1)
 ```
 
 
 # Estimating BPc, the bioturbation potential
 
-The bioturbation potential is now estimated on the reduced data set. First the contribution of each species to BPc is estimated.
+The bioturbation potential is now estimated on the reduced data set. First the contribution of each species to BPc is estimated, based on the indivual weight, the abundancy, and their mobility and reworking mode.
 
 
 ```{r}
-BPc_Bio <- function(biomass, abundance, mobility, rework)
-  sqrt(biomass/abundance) * abundance * mobility * rework
-
 BPc <- function(weight, abundance, mobility, rework)
   sqrt(weight) * abundance * mobility * rework
 
@@ -487,11 +482,11 @@ TotalBPC <- with (DataAll, aggregate(BPC, by=list(data = data, sta = sta, x = x,
 names(TotalBPC)[5] <- "BPC"
 ```
 
+# Characteristics per data provider
+
 ```{r, fig.height=5, fig.width=10}
 with(TotalBPC, boxplot(BPC~data, main = "BPc", log = "y", las = 2))
 ```
-
-## Biomass and total density
 
 TotalDensity was already calculated
 
@@ -511,15 +506,33 @@ colnames(TotalBiomass)[5] <- "AFDW"
 with(TotalBiomass, boxplot(AFDW~data, main = "Total biomass", log = "y", las = 2))
 ```
 
+A function is created to generate image plots
 
 ```{r, fig.height=10, fig.width=10}
 par(mfrow = c(2,2), oma = c(0,0,0,2))
-with(TotalDensity, points2D(x, y, colvar = TotalDens, main = "Density, ind/m2", 
-                            log = "c", pch = ".", cex = 4, las = 1))
-with(TotalBiomass, points2D(x, y, colvar = AFDW, main = "AFDW, g/m2", 
-                            log = "c", pch = ".", cex = 4, las = 1))
-with(TotalBPC, points2D(x, y, colvar = BPC, main = "BPc", log = "c", pch = ".", cex = 4, 
-                        las = 1))
+ImagePlot <- function(x, y, colvar, main = "", ...){
+  par(las = 2)
+  require(rworldmap) 
+  mapGriddedData(colourPalette = rep("white", 5), oceanCol = grey(0.97), addLegend = FALSE, 
+               xlim = c(-10,25), ylim = c(45,75))
+  axis(side = 1); axis (side = 2)
+  box()
+  title(main)
+  points2D(x, y, colvar = colvar, pch = ".", cex = 4, las = 1, add = TRUE, 
+           colkey = list(side = 1, dist = -0.15, length = 0.5, shift = 0.15), ...)
+  
+}
+```
+
+```{r, fig.height=10, fig.width=10}
+ImagePlot(x = TotalDensity$x, y = TotalDensity$y, colvar = TotalDensity$TotalDens, 
+          main = "Density, ind/m2", log = "c")
+
+ImagePlot(x = TotalBiomass$x, y = TotalBiomass$y, colvar = TotalBiomass$AFDW, 
+          main = "AFDW, g/m2", log = "c")
+
+ImagePlot(x = TotalBPC$x, y = TotalBPC$y, colvar = TotalBPC$BPC, 
+          main = "Bioturbation potential", log = "c")
 ```
 
 
@@ -581,15 +594,14 @@ The total biomasses of feeding types
 
 ```{r, fig.height=10, fig.width=10}
 par(mfrow = c(2,2), oma = c(0,0,0,2))
-with(FT_Stats, points2D(x, y, colvar = Om, main = "Total biomass Omnivores", 
-                        pch = ".", cex = 3, log = "c", las = 1))
-with(FT_Stats, points2D(x, y, colvar = De, main = "Total biomass Deposit feeders", 
-                       pch = ".", cex = 3, log = "c", las = 1))
-
-with(FT_Stats, points2D(x, y, colvar = Su, main = "Total biomass Suspension feeders", 
-                       pch = ".", cex = 3, log = "c", las = 1))
-with(FT_Stats, points2D(x, y, colvar = CaSc, main = "Total biomass Carnivore/scavengers", 
-                       pch = ".", cex = 3, log = "c", las = 1))
+ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$Om, 
+          main = "Total biomass Omnivores", log = "c")
+ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$De, 
+          main = "Total biomass Deposit feeders", log = "c")
+ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$Su, 
+          main = "Total biomass Suspension feeders", log = "c")
+ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$Su, 
+          main = "Total biomass Carnivore/scavengers", log = "c")
 ```
 
 
@@ -600,15 +612,14 @@ par(mfrow = c(2,2), oma = c(0,0,0,2))
 FT_rel <- FT_Stats
 FT_rel[,6:12] <- FT_rel[,6:12]/FT_rel$AFDW_FT
 
-
-with(FT_rel, points2D(x, y, colvar = Om, main = "relative biomass Omnivores", 
-                        pch = ".", cex = 4, log = "c", las = 1, clim = c(0.01, 1)))
-with(FT_rel, points2D(x, y, colvar = De, main = "relative biomass Deposit feeders", 
-                       pch = ".", cex = 4, log = "c", las = 1, clim = c(0.01, 1)))
-with(FT_rel, points2D(x, y, colvar = Su, main = "relative biomass Suspension feeders", 
-                       pch = ".", cex = 4, log = "c", las = 1, clim = c(0.01, 1)))
-with(FT_rel, points2D(x, y, colvar = CaSc, main = "relative biomass Carnivore/scavengers", 
-                       pch = ".", cex = 4, log = "c", las = 1, clim = c(0.01, 1)))
+ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$Om, 
+          main = "Relative biomass Omnivores", log = "")
+ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$De, 
+          main = "Relative biomass Deposit feeders", log = "")
+ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$Su, 
+          main = "Relative biomass Suspension feeders", log = "")
+ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$Su, 
+          main = "Relative biomass Carnivore/scavengers", log = "")
 ```
 
 
