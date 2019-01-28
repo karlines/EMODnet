@@ -110,7 +110,7 @@ mws.all <- merge(mws.all, Taxo, by = "tx")
 
 ### Expanding the weight dataset
 
-Next we estimate mean weights on species level, on genus level and on the family level, and bind all in one data.frame(*mws*).
+Next we estimate mean weights on species level, on genus level, on the family level, and on the level of order and bind all in one data.frame(*mws*).
 
 ```{r}
 mws.species <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$tx, FUN = mean, na.rm = TRUE),
@@ -133,11 +133,18 @@ mws.family  <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$fam, 
 mws.family  <- mws.family[-which(rownames(mws.family)==""),]
 mws.family  <- subset(mws.family, !is.na(meanW))
 
-mws <- rbind(mws.species, mws.genus, mws.family)
+mws.order   <- data.frame(meanW = tapply(mws.all$avweight, INDEX = mws.all$ord, FUN = mean, na.rm = TRUE),
+                          sdW   = tapply(mws.all$avweight, INDEX = mws.all$ord, FUN = sd,   na.rm = TRUE),
+                          n     = tapply(mws.all$avweight, INDEX = mws.all$ord, FUN = length),
+                          level = "order")
+mws.order   <- mws.order[-which(rownames(mws.order)==""),]
+mws.order   <- subset(mws.order, !is.na(meanW))
+
+mws <- rbind(mws.species, mws.genus, mws.family, mws.order)
 mws$taxon <- rownames(mws)
 ```
 
-The total number of weight values thus obtained is `r nrow(mws)`, of which `r nrow(mws.species)` are estimated at species level, `r nrow(mws.genus)` at genus level and `r nrow(mws.family)` at family level.
+The total number of weight values thus obtained is `r nrow(mws)`, of which `r nrow(mws.species)` are estimated at species level, `r nrow(mws.genus)` at genus level,  `r nrow(mws.family)` at family level, and  and `r nrow(mws.order)` at level or order.
 
 
 ## FeedingTypes
@@ -178,11 +185,17 @@ ft.family <- data.frame(ft = tapply(FeedingType$Trophy, INDEX = FeedingType$Fami
                        n   = tapply(FeedingType$Trophy, INDEX = FeedingType$Family, FUN = length))
 ft.family <- data.frame(taxon = rownames(ft.family), ft.family, level = "family")
 
-ft <- rbind(ft.species, ft.genus, ft.family)
+ft.order <- data.frame(ft = tapply(FeedingType$Trophy, INDEX = FeedingType$Order, 
+                                   FUN = function(x) names(sort(table(x), decreasing = TRUE)[1])), 
+                       n   = tapply(FeedingType$Trophy, INDEX = FeedingType$Order, FUN = length))
+ft.order <- data.frame(taxon = rownames(ft.order), ft.order, level = "order")
+
+
+ft <- rbind(ft.species, ft.genus, ft.family, ft.order)
 head(ft, n = 2)
 ```
 
-The total number of feeding types thus obtained is `r nrow(ft)`, of which `r nrow(ft.species)` are known at species level, `r nrow(ft.genus)` at genus level and `r nrow(ft.family)` at family level.
+The total number of feeding types thus obtained is `r nrow(ft)`, of which `r nrow(ft.species)` are known at species level, `r nrow(ft.genus)` at genus level, `r nrow(ft.family)` at family level and `r nrow(ft.order)` at order level.
 
 ## life history traits
 
@@ -224,11 +237,14 @@ traits.genus  <- traitfun.all("gen")
 traits.genus$level <- "genus"
 traits.family <- traitfun.all("fam")
 traits.family$level <- "family"
-traits <- rbind(traits.species, traits.genus[!traits.genus$taxon %in% traits.species$taxon,])
-traits <- rbind(traits, traits.family[!traits.family$taxon %in% traits$taxon,])
+traits.order <- traitfun.all("ord")
+traits.order$level <- "order"
+traits <- rbind(traits.species, traits.genus [!traits.genus$taxon %in% traits.species$taxon,])
+traits <- rbind(traits,         traits.family[!traits.family$taxon %in% traits$taxon,])
+traits <- rbind(traits,         traits.order [!traits.order$taxon %in% traits$taxon,])
 ```
 
-The total number of traits thus obtained is `r nrow(traits)`, of which `r nrow(traits.species)` are estimated at species level, `r nrow(traits.genus)` at genus level and `r nrow(traits.family)` at family level.
+The total number of traits thus obtained is `r nrow(traits)`, of which `r length(which(traits$level == "species"))` are estimated at species level, `r length(which(traits$level == "genus"))` at genus level, `r length(which(traits$level == "family"))` at family level and `r length(which(traits$level == "order"))` at order level.
 
 We tabulate the number of occurrences of each trait in the resulting data.frame.
 
@@ -337,7 +353,12 @@ MergeData <- function(density = occ.full, data2){
 
   DataWithoutBiomass <- density[!density$ID %in% DataWithBiomass$ID, ]
 
-  totalDensity <- with (DataWithBiomass, aggregate(dens, by = list(data = data, sta = sta, x = x, y = y), FUN = sum))
+  DataWithBiomass    <- rbind(DataWithBiomass,
+                              merge(DataWithoutBiomass, data2, by.x = "ord", by.y = "taxon"))
+
+  DataWithoutBiomass <- density[!density$ID %in% DataWithBiomass$ID, ]
+
+    totalDensity <- with (DataWithBiomass, aggregate(dens, by = list(data = data, sta = sta, x = x, y = y), FUN = sum))
   colnames(totalDensity)[5] <- "EstDens"
   list(complete = DataWithBiomass, incomplete = DataWithoutBiomass, DENS = totalDensity)
 }
@@ -351,7 +372,17 @@ MergeData <- function(density = occ.full, data2){
 DensityWeight <- MergeData(density = occ.full, data2 = mws)
 ```
 
-The fraction of data for which individual weight could be estimated = `r nrow(DensityWeight$complete)/nrow(occ.full)`
+The fraction of data for which individual weight could be estimated = `r nrow(DensityWeight$complete)/nrow(occ.full)`.
+
+The type of organisms for which the information is lacking belong to the phyla:
+
+```{r}
+TT <- table(DensityWeight$incomplete$phy)
+sort(TT[TT>0], decreasing = TRUE)
+```
+
+Many of these phyla are small organisms (Tardigrada, Foraminifera,...), so the biomass that is not taken into account is probably limited.
+
 
 ## Merging density and traits
 
@@ -360,6 +391,12 @@ DensityTrait <- MergeData(density = occ.full, data2 = traits)
 ```
 
 The fraction of data for which traits could be estimated = `r nrow(DensityTrait$complete)/nrow(occ.full)`
+The unclassified organisms belong to:
+
+```{r}
+TT <- table(DensityTrait$incomplete$phy)
+sort(TT[TT>0], decreasing = TRUE)
+```
 
 ## Merging density and feeding types
 
@@ -368,7 +405,12 @@ DensityFT <- MergeData(density = occ.full, data2 = ft)
 ```
 
 The fraction of data for which feeding types could be estimated = `r nrow(DensityFT$complete)/nrow(occ.full)`
+The unclassified organisms belong to:
 
+```{r}
+TT <- table(DensityFT$incomplete$phy)
+sort(TT[TT>0], decreasing = TRUE)
+```
 
 ## Data for estimating bioturbation potential 
 
@@ -383,6 +425,7 @@ dim(occ.full)
 ```
 
 The fraction of data that has all information to estimate bioturbation potential = `r nrow(DataAll)/nrow(occ.full)`
+
 
 ## Check on the representativeness of the reduced data set
 
@@ -566,11 +609,12 @@ FTnames <- as.data.frame(matrix(ncol = 2, byrow = TRUE, data = c(
  "De" , "depositfeeder",
  "He" , "herbivore",
  "Om" , "omnivore",
+ "Pa" , "parasite",
  "Su" , "suspension feeder",
  "SuDe" , "suspension/deposit feeder"
 )))
 with (FT_Stats, plot(x, y, col = c(1:6)[dominant], pch = ".", cex = 5, main = "Dominant feeding type"))
-legend("bottomright", col = 1:6, legend = FTnames[FTnames[,1]==as.character(levels(FT_Stats$dominant)),2], pch = 16, cex = 1.25)
+legend("bottomright", col = 1:6, legend = FTnames[,2], pch = 16, cex = 1.25)
 ```
 
 ```{r, fig.height=10, fig.width=10}
@@ -600,7 +644,7 @@ ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$De,
           main = "Total biomass Deposit feeders", log = "c")
 ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$Su, 
           main = "Total biomass Suspension feeders", log = "c")
-ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$Su, 
+ImagePlot(x = FT_Stats$x, y = FT_Stats$y, colvar = FT_Stats$CaSc, 
           main = "Total biomass Carnivore/scavengers", log = "c")
 ```
 
@@ -618,7 +662,7 @@ ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$De,
           main = "Relative biomass Deposit feeders", log = "")
 ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$Su, 
           main = "Relative biomass Suspension feeders", log = "")
-ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$Su, 
+ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$CaSc, 
           main = "Relative biomass Carnivore/scavengers", log = "")
 ```
 
