@@ -3,16 +3,16 @@ title: "Trait-based products of EMODnet benthic biology"
 author: "Karline Soetaert, Sarah O' Flynn, Olivier Beauchard, Peter Herman"
 date: "9 October 2018"
 output:
-  word_document: default
   pdf_document: default
   html_document: default
+  word_document: default
 ---
 
 # Abstract
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 library(plot3D)
 require(viridis)
 ```
@@ -48,64 +48,38 @@ head(Taxo, n = 2)
 
 ## the MWTL data
 
-The MWTL data is the only data set that contains both species *biomass* and *densities* (the other data sets comprise only densities or just presence/absence). This data is used to estimate mean individual weights of the various species. 
+The MWTL data is the only data set that contains both species *biomass* and *densities* (the other data sets comprise only densities or just presence/absence). This data is used to estimate mean individual weights of the various species. The file *occ.csv* has been prepared by Olivier Beauchard as part of the EMODNET product on trait types. It contains average density and biomass per taxon and station. Averaging was over time. Some taxa lumping has been done in the preparation of the file, as well as taxonomic checks against WORMS.
 
-Biomass is in *g AFDW/m2*, density in *number /m2*
+Biomass is in *g AFDW/m2*, density in *number/m2*
 
-```{r}
-MWTLdata        <- read.csv( "densbiomassMWTL.csv")
-colnames(MWTLdata)[2] <- "tx"
-cat("\ndimension and first part of the data set : \n")
-dim (MWTLdata)
-head(MWTLdata, n = 2)
+```{r mwMWTL}
+
+MWTLdata <- read.csv("occ.csv", header=TRUE, stringsAsFactors = FALSE)
+
+# calculate average weight per species and sample
+MWTLdata$mw <- MWTLdata$biom/MWTLdata$ind
+MWTLdata$lmw <- log(MWTLdata$mw)
+
+# calculate arithmetic and geometric mean per species over all samples where the species occurs
+spmweight <- aggregate(mw~tax,MWTLdata,FUN=mean)
+spgmweight <- aggregate(lmw~tax,MWTLdata,FUN=mean)
+spgmweight$gmw <- exp(spgmweight$lmw)
+n <- aggregate(mw~tax, MWTLdata, FUN=function(x) length(x))
+names(n) <- c("tax","n")
+
+mweights <- merge(spmweight, spgmweight, by="tax")
+mweights <- merge(mweights, n, by="tax")
+mweights <- mweights[,-3]
+write.csv(mweights, file="mweights.csv")
 ```
-
-
-## Species body mass
-
-There are two biomass data sets. The first data set was prepared by Olivier Beauchard; it contains the body mass in ash-free dry weight.
-
-```{r}
-mws.ol <- read.csv("BodyMass.csv")
-cat("\ndimension and first part of the data set : \n")
-dim(mws.ol)
-head(mws.ol, n = 2)
-```
-
-Another dataset was derived from the MWTL data series by Peter Herman; it contains both the mean weight (*mw*) and geometric mean weight (*gmw*), in ash-free dry weight, and the number of instances on which this was determined (*n*).
 
 ```{r}
 mws.mwtl <- read.csv("mweights.csv")
 cat("\ndimension and first part of the data set : \n")
 dim(mws.mwtl)
 head(mws.mwtl, n = 2)
-```
-
-### Checking consistency in weight data
-
-Both data sets contain species weights that are not present in the other data set, so they are merged. 
-First it is checked if the data are compatible.
-
-```{r, fig.width=4, fig.height=4}
-cat("number of species in first dataset absent in second: ", length(which(! mws.ol$tx  %in% mws.mwtl$species)), "\n")
-cat("number of species in second dataset absent in first: ", length(which(! mws.mwtl$species  %in% mws.ol$tx)), "\n")
-
-Check <- merge(mws.ol[,1:2], mws.mwtl[,2:3], by.x = "tx", by.y = "species")
-cat("number of species in common: ", nrow(Check), "\n")
-
-with(Check, plot(BodyMassAFWD, mw, log= "xy", xlab = "weight dataset 1", ylab = "weight dataset 2", main = "comparison body mass"))
-```
-
-### Combining the two weight datasets.
-
-We combine both data sets and add the taxonomic tree by merging the data with the taxon data.
-
-```{r}
-colnames(mws.ol  )[1:2]   <- c("tx", "avweight")
 colnames(mws.mwtl)[2:3]   <- c("tx", "avweight")
-
-mws.all <- rbind(mws.mwtl[,2:3], mws.ol[,1:2])
-mws.all <- merge(mws.all, Taxo, by = "tx")
+mws.all <- merge(mws.mwtl, Taxo, by = "tx")
 ```
 
 ### Expanding the weight dataset
@@ -265,33 +239,33 @@ cat("Ri:");              table(traits$Ri)
 Density data are read.
 
 ```{r}
-occ <- read.csv("df_ab.csv")
+density <- read.csv("df_ab.csv")
 
 cat("\ndimension and first part of the data set : \n")
-dim(occ)
-head(occ, n = 2)
+dim(density)
+head(density, n = 2)
 
 cat("\ntotal number of data points per provider : \n")
-table(occ$data)
+table(density$data)
 ```
 
 Some data providers did not record density, but just presence/absence; these data are removed.
 
 ```{r}
-occ      <- occ[!is.na(occ$dens), ]
-occ$data <- droplevels(occ$data)
+density      <- density[!is.na(density$dens), ]
+density$data <- droplevels(density$data)
 
-occ$ID <- paste(occ$sta, occ$tx, sep = "")
+density$ID <- paste(density$sta, density$tx, sep = "")
 ```
 
-The total number of species in this data set is `r length(unique(occ$tx))`
+The total number of species in this data set is `r length(unique(density$tx))`
 
 # A look at the data 
 
 Species densities are summed per station to give the total densities
 
 ```{r}
-TotalDensity <- aggregate(occ$dens, by = list(data = occ$data, sta = occ$sta, x = occ$x, y = occ$y), FUN = sum)
+TotalDensity <- aggregate(density$dens, by = list(data = density$data, sta = density$sta, x = density$x, y = density$y), FUN = sum)
 names(TotalDensity)[5] <- "TotalDens"
 cat("total number of stations per provider : \n")
 table(TotalDensity$data)
@@ -328,18 +302,18 @@ We then calculate total density on this reduced data set and see what fraction o
 First the required taxonomic information is added to the density list:
 
 ```{r}
-which(!occ$tx %in% Taxo$txa)
+which(!density$tx %in% Taxo$txa)
 
-TaxoSpec <- Taxo$txa %in% occ$tx 
-TaxoUsed <- Taxo[Taxo$txa%in%occ$tx ,]
-occ.full <- merge(occ, TaxoUsed, by.x = "tx", by.y = "tx")
+TaxoSpec <- Taxo$txa %in% density$tx 
+TaxoUsed <- Taxo[Taxo$txa%in%density$tx ,]
+density.full <- merge(density, TaxoUsed, by.x = "tx", by.y = "tx")
 ```
 
 To merge density data with the other data sets, a function is created.
 
 
 ```{r}
-MergeData <- function(density = occ.full, data2){
+MergeData <- function(density = density.full, data2){
 
   DataWithBiomass    <-       merge(density,            data2, by.x = "tx", by.y = "taxon")   # merging at species level
 
@@ -369,10 +343,10 @@ MergeData <- function(density = occ.full, data2){
 ## Merging density and weights
 
 ```{r}
-DensityWeight <- MergeData(density = occ.full, data2 = mws)
+DensityWeight <- MergeData(density = density.full, data2 = mws)
 ```
 
-The fraction of data for which individual weight could be estimated = `r nrow(DensityWeight$complete)/nrow(occ.full)`.
+The fraction of data for which individual weight could be estimated = `r nrow(DensityWeight$complete)/nrow(density.full)`.
 
 The type of organisms for which the information is lacking belong to the phyla:
 
@@ -387,10 +361,10 @@ Many of these phyla are small organisms (Tardigrada, Foraminifera,...), so the b
 ## Merging density and traits
 
 ```{r}
-DensityTrait <- MergeData(density = occ.full, data2 = traits)
+DensityTrait <- MergeData(density = density.full, data2 = traits)
 ```
 
-The fraction of data for which traits could be estimated = `r nrow(DensityTrait$complete)/nrow(occ.full)`
+The fraction of data for which traits could be estimated = `r nrow(DensityTrait$complete)/nrow(density.full)`
 The unclassified organisms belong to:
 
 ```{r}
@@ -401,10 +375,10 @@ sort(TT[TT>0], decreasing = TRUE)
 ## Merging density and feeding types
 
 ```{r}
-DensityFT <- MergeData(density = occ.full, data2 = ft)
+DensityFT <- MergeData(density = density.full, data2 = ft)
 ```
 
-The fraction of data for which feeding types could be estimated = `r nrow(DensityFT$complete)/nrow(occ.full)`
+The fraction of data for which feeding types could be estimated = `r nrow(DensityFT$complete)/nrow(density.full)`
 The unclassified organisms belong to:
 
 ```{r}
@@ -421,37 +395,38 @@ DataAll <- merge(DensityWeight$complete [, c("tx", "data","sta","x","y", "dens",
                                         "Body.size.2", "Burrowing.depth.2","Mixing.rate.2")], by = "ID", suffixes = "")
 
 dim(DataAll)
-dim(occ.full)
+dim(density.full)
 ```
 
-The fraction of data that has all information to estimate bioturbation potential = `r nrow(DataAll)/nrow(occ.full)`
+The fraction of data that has all information to estimate bioturbation potential = `r nrow(DataAll)/nrow(density.full)`
 
 
 ## Check on the representativeness of the reduced data set
 
 For the mwtl data we now compare the measured biomass with the biomass that we estimate, based on the mean weights.
+Note that in the MWTLdata, the density is called "ind" (from number of individuals)
 
 ```{r, fig.width=8, fig.height=5}
 par(mfrow = c(1,3))
-mws.species$tx <- rownames(mws.species)
-MWTL.data <- subset(MWTLdata, density > 0 & biomass > 0)
-MWTL.data <- merge(MWTL.data,Taxo)
+mws.species$tax <- rownames(mws.species)
+MWTL.data <- subset(MWTLdata, ind > 0 & biom > 0)
+#MWTL.data <- merge(MWTL.data,Taxo)
 mwscompare     <- merge(mws.species, MWTL.data)
-with(mwscompare, plot(biomass, density*meanW, log = "xy", pch = ".", cex = 3, 
+with(mwscompare, plot(biom, ind*meanW, log = "xy", pch = ".", cex = 3, 
           xlab = "measured density", ylab = "estimated based on mean weight", main = "species level"))
-with(mwscompare, summary(density*meanW-biomass))
+with(mwscompare, summary(ind*meanW-biom))
 
 mws.genus$gen <- rownames(mws.genus)
 mwscompare     <- merge(mws.genus, MWTL.data)
-with(mwscompare, plot(biomass, density*meanW, log = "xy", pch = ".", cex = 3,
+with(mwscompare, plot(biom, ind*meanW, log = "xy", pch = ".", cex = 3,
           xlab = "measured density", ylab = "estimated based on mean weight", main = "genus level"))
-with(mwscompare, summary(density*meanW-biomass))
+with(mwscompare, summary(ind*meanW-biom))
 
 mws.family$fam <- rownames(mws.family)
 mwscompare     <- merge(mws.family, MWTL.data)
-with(mwscompare, plot(biomass, density*meanW, log = "xy", pch = ".", cex = 3,  
+with(mwscompare, plot(biom, ind*meanW, log = "xy", pch = ".", cex = 3,  
           xlab = "measured density", ylab = "estimated based on mean weight", main = "family level"))
-with(mwscompare, summary(density*meanW-biomass))
+with(mwscompare, summary(ind*meanW-biom))
 
 ```
 
