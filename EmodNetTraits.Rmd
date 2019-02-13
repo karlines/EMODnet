@@ -648,8 +648,11 @@ ImagePlot(x = FT_rel$x, y = FT_rel$y, colvar = FT_rel$CaSc,
 write.csv(file = "results/Density.csv", TotalDensity)
 write.csv(file = "results/Biomass.csv", TotalBiomass)
 write.csv(file = "results/BPC.csv", TotalBPC)
-SuspensionFeeders <- FT_Stats[,c(2,1,3,4,11)]; names(SuspensionFeeders)[5] <- "AFDW_S"
-DepositFeeders <- FT_Stats[,c(2,1,3,4,7)]; names(DepositFeeders)[5] <- "AFDW_D"
+SuspensionFeeders <- FT_Stats[,c("data","sta","x","y","Su")]; names(SuspensionFeeders)[5] <- "AFDW_Susp"
+DepositFeeders    <- FT_Stats[,c("data","sta","x","y","De")];  names(DepositFeeders)[5] <- "AFDW_Dep"
+Omnivores         <- FT_Stats[,c("data","sta","x","y","Om")];  names(Omnivores)[5] <- "AFDW_Omni"
+Carnivores        <- FT_Stats[,c("data","sta","x","y","CaSc")];  names(Carnivores)[5] <- "AFDW_Carn"
+
 write.csv(file = "results/SuspensionFeeders.csv", SuspensionFeeders)
 write.csv(file = "results/DepositFeeders.csv", DepositFeeders)
 ```
