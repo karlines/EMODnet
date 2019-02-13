@@ -26,9 +26,9 @@ Both these activities have a large impact on the biogeochemical cycles in the en
 
 Biologists have tried to categorise the bioturbation or bio-irrigation activity based on the identity of the organims.  They do not derive the rate parameters as used in the biogeochemical models but rather derive a potential of the organisms to perform these tasks.
 
-Here we use Benthic abundance data from EMODnet to estimate the bioturbation potential and the bioirrigation potential index. 
+Here we use Benthic abundance data from EMODnet to estimate the bioturbation potential (Solan et al., 2004). 
 
-To derive these potentials we need information on:
+To derive this index we need information on:
 
 * The weights of the species and their total biomass
 * The species mobility and sediment reworking mode
@@ -653,3 +653,10 @@ DepositFeeders <- FT_Stats[,c(2,1,3,4,7)]; names(DepositFeeders)[5] <- "AFDW_D"
 write.csv(file = "results/SuspensionFeeders.csv", SuspensionFeeders)
 write.csv(file = "results/DepositFeeders.csv", DepositFeeders)
 ```
+
+
+# References
+
+Solan M, Cardinale BJ, Downing AL, Engelhardt KAM, Ruesink
+JL, Srivastava DS. 2004. Extinction and ecosystem function in
+the marine benthos. Science 306:1177–80.
